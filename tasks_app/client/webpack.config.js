@@ -10,6 +10,7 @@ module.exports = {
     publicPath: '/dist/',
   },
   mode: 'development',
+  
   module: {
     rules: [
       {
@@ -19,7 +20,14 @@ module.exports = {
           {
             loader: 'babel-loader',
             options: {
-              presets: ['@babel/preset-react'],
+              presets: [
+                [
+                  "@babel/preset-react",
+                  {
+                    runtime: "automatic",
+                  },
+                ],
+              ],
             },
           },
         ],
@@ -28,3 +36,4 @@ module.exports = {
   },
   
 };
+
