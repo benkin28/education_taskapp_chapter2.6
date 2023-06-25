@@ -1,16 +1,14 @@
-const path = require('path');
-
-
+const path = require("path");
 
 module.exports = {
-  entry: './src/index.js',
+  entry: "./src/index.js",
   output: {
-    path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
-    publicPath: '/dist/',
+    path: path.join(__dirname, "dist"),
+    filename: "bundle.js",
+    publicPath: "/dist/",
   },
-  mode: 'development',
-  
+  mode: "development",
+
   module: {
     rules: [
       {
@@ -18,7 +16,7 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           {
-            loader: 'babel-loader',
+            loader: "babel-loader",
             options: {
               presets: [
                 [
@@ -34,6 +32,4 @@ module.exports = {
       },
     ],
   },
-  
 };
-
